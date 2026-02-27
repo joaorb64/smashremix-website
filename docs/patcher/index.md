@@ -7,7 +7,7 @@ ssb_crc: eb97929e
   <button class="md-button md-button--primary" onclick="switchCategory('other', this)">Other / Misc</button>
 </div>
 
-<div style="display: flex; gap: 0.25rem;">
+<div class="patch-controls">
   <select id="patch-selector" onchange="updatePatcher()"></select>
   <button class="md-button md-button--primary" id="openPatchModal" style="flex-shrink: 0;">
     Patch Notes
@@ -30,7 +30,7 @@ ssb_crc: eb97929e
   <div class="material-modal-dialog">
 
     <div class="material-modal-header">
-      <h2 id="patchModalTitle">Patch Notes</h2>
+      <h3 id="patchModalTitle">Patch Notes</h3>
       <button class="material-modal-close" id="closePatchModal">✕</button>
     </div>
 
@@ -130,6 +130,7 @@ ssb_crc: eb97929e
 
 <link type="text/css" rel="stylesheet" href="rom-patcher-js/style.css" media="all" />
 <script type="text/javascript" src="rom-patcher-js/RomPatcher.webapp.js"></script>
+<script type="text/javascript" src="showdownjs/showdown.min.js"></script>
 
 <script>
 const myPatcherSettings = {
@@ -296,9 +297,16 @@ const closeBtn = document.getElementById('closePatchModal');
 const modalBody = document.getElementById('patchModalBody');
 const modalTitle = document.getElementById('patchModalTitle');
 
+const converter = new showdown.Converter({
+  tables: true,
+  strikethrough: true,
+  simpleLineBreaks: true
+});
+
 openBtn.addEventListener('click', () => {
-  modalTitle.textContent = currentNoteVersion ? `Patch Notes - ${currentNoteVersion}` : 'Patch Notes';
-  modalBody.textContent = currentNoteBody || '';
+  modalTitle.textContent = currentNoteVersion ? `${currentNoteVersion}` : 'Patch Notes';
+  const html = converter.makeHtml(currentNoteBody || 'No notes.');
+  modalBody.innerHTML = html;
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden'; // lock page scroll
 });

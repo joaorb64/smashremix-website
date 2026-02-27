@@ -32,9 +32,13 @@
   border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 
-.material-modal-header h2 {
+.material-modal-header h3 {
   margin: 0;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 1rem;
 }
 
 /* Close */

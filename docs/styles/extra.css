@@ -1,8 +1,12 @@
 /* Container */
 .patch-tabs {
   display: flex;
-  gap: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.patch-tabs .md-button {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .md-content .md-button {
@@ -91,6 +95,18 @@
   cursor: pointer;
 }
 
+.patch-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .patch-controls {
+    flex-direction: row;
+  }
+}
+
 /* SELECT BASE */
 #patch-selector {
   width: 100%;
@@ -145,11 +161,6 @@ article #rom-patcher-container {
   max-width: 100%;
 }
 
-article #rom-patcher-powered {
-  text-align: left;
-  margin-left: 1rem;
-}
-
 article #rom-patcher-powered a {
   opacity: 0.8;
 }
@@ -182,5 +193,9 @@ article #rom-patcher-container button:not(:disabled):hover {
 }
 
 article #rom-patcher-container .text-truncate {
+  white-space: normal;
+}
+
+.material-modal-body {
   white-space: normal;
 }
