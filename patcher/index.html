@@ -1,0 +1,800 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://joaorb64.github.io/smashremix-website/patcher/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../emulator/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/smashremixlogo_icon.webp">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Patcher - Smash Remix</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/modal.css">
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+      <link rel="stylesheet" href="../styles/topbar.css">
+    
+      <link rel="stylesheet" href="../styles/sidebar.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+         
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <label class="md-header__button md-icon" for="__drawer">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis"> Smash Remix </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+             Patcher 
+          </span>
+        </div>
+      </div>
+    </div>
+           
+    <label class="md-header__button md-icon" for="__search">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </label>
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>   
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                       
+ 
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label
+    class="md-nav__title"
+    for="__drawer"
+    style="padding: 1rem 0; height: unset"
+  >
+    <a
+      href=".."
+      title="Smash Remix"
+      class="md-nav__button md-logo"
+      aria-label="Smash Remix"
+      data-md-component="logo"
+      style="position: unset; padding: 0"
+    >
+      <img
+        src="../assets/remixlogo_web.webp"
+        style="max-width: 80%; height: auto"
+      />
+    </a>
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+   
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patcher
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Patcher
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+   
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../emulator/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emulator
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Emulator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+ 
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Patcher</h1>
+
+<div class="patch-tabs">
+  <button class="md-button md-button--primary" onclick="switchCategory('releases', this)">Smash Remix Releases</button>
+  <button class="md-button md-button--primary" onclick="switchCategory('other', this)">Other / Misc</button>
+</div>
+
+<div class="patch-controls">
+  <select id="patch-selector" onchange="updatePatcher()"></select>
+  <button class="md-button md-button--primary" id="openPatchModal" style="flex-shrink: 0;">
+    Patch Notes
+  </button>
+</div>
+
+<div id="region-container" style="margin-bottom: 1rem; margin-left: 1rem;">
+  <label style="margin-right:15px;">
+    <input type="radio" name="region" value="ntsc" checked onchange="updatePatcher()">
+    <span>NTSC</span>
+  </label>
+
+  <label id="pal-radio-label">
+    <input id="pal-radio" type="radio" name="region" value="pal" onchange="updatePatcher()">
+    <span>PAL60</span>
+  </label>
+</div>
+
+<div id="patchModal" class="material-modal" data-search-exclude>
+  <div class="material-modal-dialog">
+
+    <div class="material-modal-header">
+      <h3 id="patchModalTitle">Patch Notes</h3>
+      <button class="material-modal-close" id="closePatchModal">✕</button>
+    </div>
+
+    <div class="material-modal-body" id="patchModalBody">
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade material-modal" id="patchModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-wide">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Patch Notes</h2>
+        <button type="button"
+                class="modal-close"
+                data-bs-dismiss="modal">
+          ✕
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="rom-patcher-container" data-search-exclude>
+  <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+    <div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM file:</label></div>
+    <div class="rom-patcher-container-input">
+      <input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+    </div>
+  </div>
+  <div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
+    <div class="rom-patcher-row">
+      <div class="text-right">CRC32:</div>
+      <div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+    </div>
+    <div class="rom-patcher-row">
+      <div class="text-right">MD5:</div>
+      <div class="text-truncate"><span id="rom-patcher-span-md5"></span></div>
+    </div>
+    <div class="rom-patcher-row">
+      <div class="text-right">SHA-1:</div>
+      <div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+    </div>
+    <div class="rom-patcher-row" id="rom-patcher-row-info-rom">
+      <div class="text-right">ROM:</div>
+      <div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+    </div>
+  </div>
+
+  <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+    <div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">Patch file:</label>
+    </div>
+    <div class="rom-patcher-container-input">
+      <select id="rom-patcher-select-patch"></select>
+    </div>
+  </div>
+  <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+    <div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
+    <div class="text-truncate" id="rom-patcher-patch-description"></div>
+  </div>
+  <div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
+    id="rom-patcher-row-patch-requirements">
+    <div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
+    <div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+  </div>
+
+  <div class="text-center" id="rom-patcher-row-apply">
+    <div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
+    </div>
+    <button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
+  </div>
+</div>
+
+<div id="rom-patcher-powered" class="text-center">
+  <a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"><img
+      src="rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher JS</a>
+</div>
+
+<p><link type="text/css" rel="stylesheet" href="rom-patcher-js/style.css" media="all" /></p>
+<script type="text/javascript" src="rom-patcher-js/RomPatcher.webapp.js"></script>
+<script type="text/javascript" src="showdownjs/showdown.min.js"></script>
+
+<script>
+const myPatcherSettings = {
+  language: 'en',
+  requireValidation: true,
+  allowDropFiles: false,
+};
+
+let releases = [];
+let others = [];
+let currentNoteVersion = '';
+let currentNoteBody = '';
+
+async function loadAllPatches() {
+  try {
+    const [relResp, otherResp] = await Promise.all([
+      fetch('patches/releases.json'),
+      fetch('patches/other.json')
+    ]);
+
+    if (relResp.ok) releases = await relResp.json();
+    if (otherResp.ok) others = await otherResp.json();
+
+    populateAllOptions();
+    switchCategory('releases', );
+  } catch (err) {
+    console.warn('Failed loading patch data', err);
+  }
+}
+
+function populateAllOptions() {
+  const select = document.getElementById('patch-selector');
+  select.innerHTML = '';
+
+  // Releases
+  releases.forEach(entry => {
+    const opt = document.createElement('option');
+    opt.value = entry.version;
+    opt.textContent = entry.name;
+    opt.dataset.category = 'releases';
+    opt.dataset.files = JSON.stringify(entry.files);
+    opt.dataset.notes = entry.patch_notes || '';
+    opt.dataset.version = entry.name || '';
+    select.appendChild(opt);
+  });
+
+  // Other patches
+  others.forEach(entry => {
+    const opt = document.createElement('option');
+    opt.value = entry.name;
+    opt.textContent = entry.name;
+    opt.dataset.category = 'other';
+    opt.dataset.file = entry.file;
+    opt.dataset.description = entry.description || '';
+    select.appendChild(opt);
+  });
+}
+
+function updatePatcher() {
+  const selector = document.getElementById('patch-selector');
+  const selected = selector.options[selector.selectedIndex];
+  if (!selected) return;
+
+  const ntscRadio = document.querySelector('input[name="region"][value="ntsc"]');
+  const palRadio = document.getElementById('pal-radio');
+
+  let patchFile = null;
+
+  if (selected.dataset.category === 'releases') {
+    const files = JSON.parse(selected.dataset.files);
+
+    if (files.pal) {
+      palRadio.disabled = false;
+    } else {
+      palRadio.disabled = true;
+      ntscRadio.checked = true;
+    }
+
+    const region = document.querySelector('input[name="region"]:checked').value;
+    patchFile = files[region] || files.ntsc;
+
+    currentNoteBody = selected.dataset.notes || '';
+    currentNoteVersion = selected.dataset.version || '';
+  }
+
+  if (selected.dataset.category === 'other') {
+    palRadio.disabled = true;
+    ntscRadio.checked = true;
+    patchFile = selected.dataset.file;
+    currentNoteBody = '';
+    currentNoteVersion = '';
+  }
+
+  if (!patchFile) return;
+
+  const patcherConfig = {
+    file: `patches/${selected.dataset.category}/${patchFile}`,
+    name: patchFile,
+    inputCrc32: 'eb97929e',
+    description: selected.dataset.description || null,
+    outputName: `${selected.textContent} (Patched)`
+  };
+
+  if (RomPatcherWeb.isInitialized() === false) {
+    RomPatcherWeb.initialize(myPatcherSettings, patcherConfig);
+  } else {
+    RomPatcherWeb.setEmbededPatches(patcherConfig);
+  }
+
+  // Notes button logic
+  const notesBtn = document.getElementById('openPatchModal');
+  if (currentNoteBody) {
+    notesBtn.style.display = '';
+  } else {
+    notesBtn.style.display = 'none';
+  }
+}
+
+function switchCategory(category, button) {
+  const selector = document.getElementById('patch-selector');
+  const options = selector.querySelectorAll('option[data-category]');
+  const tabButtons = document.querySelectorAll('.patch-tabs .md-button');
+
+  // Atualiza botão ativo
+  tabButtons.forEach(btn => btn.classList.remove('active'));
+  if (button) button.classList.add('active');
+  else tabButtons[0].classList.add('active');
+
+  let firstMatch = null;
+
+  options.forEach(opt => {
+    if (opt.dataset.category === category) {
+      opt.style.display = '';
+      if (!firstMatch) firstMatch = opt;
+    } else {
+      opt.style.display = 'none';
+    }
+  });
+
+  if (firstMatch) {
+    selector.value = firstMatch.value;
+  }
+
+  // Sempre volta para NTSC ao trocar categoria
+  const ntscRadio = document.querySelector('input[name="region"][value="ntsc"]');
+  ntscRadio.checked = true;
+
+  updatePatcher();
+}
+
+window.addEventListener('load', function(){
+
+  loadAllPatches().then(() => {
+    updatePatcher();
+  });
+
+  document.getElementById('patch-selector')
+    .addEventListener('change', updatePatcher);
+});
+
+const modal = document.getElementById('patchModal');
+const openBtn = document.getElementById('openPatchModal');
+const closeBtn = document.getElementById('closePatchModal');
+const modalBody = document.getElementById('patchModalBody');
+const modalTitle = document.getElementById('patchModalTitle');
+
+const converter = new showdown.Converter({
+  tables: true,
+  strikethrough: true,
+  simpleLineBreaks: true
+});
+
+openBtn.addEventListener('click', () => {
+  modalTitle.textContent = currentNoteVersion ? `${currentNoteVersion}` : 'Patch Notes';
+  const html = converter.makeHtml(currentNoteBody || 'No notes.');
+  modalBody.innerHTML = html;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // lock page scroll
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Modal close button
+closeBtn.addEventListener('click', closeModal);
+
+// Clicking outside of modal closes it
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
+
+// ESC closes modal
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.style.display === 'flex') {
+    closeModal();
+  }
+});
+</script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.suggest", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "toc.integrate", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+    
+  </body>
+</html>
