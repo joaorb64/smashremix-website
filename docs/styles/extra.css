@@ -178,8 +178,18 @@ article #rom-patcher-container input[type="file"].valid {
   background-color: #398e3d;
 }
 
+#rom-patcher-container
+  input[type="file"].valid:not(:disabled):not(.empty):hover {
+  background-color: #29642c !important;
+}
+
 article #rom-patcher-container input[type="file"].invalid {
   background-color: #e53734;
+}
+
+#rom-patcher-container
+  input[type="file"].invalid:not(:disabled):not(.empty):hover {
+  background-color: #a92927 !important;
 }
 
 article #rom-patcher-container button {

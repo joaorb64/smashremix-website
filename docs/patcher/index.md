@@ -132,12 +132,21 @@ ssb_crc: eb97929e
 <link type="text/css" rel="stylesheet" href="rom-patcher-js/style.css" media="all" />
 <script type="text/javascript" src="rom-patcher-js/RomPatcher.webapp.js"></script>
 <script type="text/javascript" src="showdownjs/showdown.min.js"></script>
+<script type="text/javascript" src="MarcFile.js"></script>
+<script type="text/javascript" src="MarcFileN64.js"></script>
 
 <script>
+async function convertRom(romFile) {
+    const marc = new MarcFile(romFile._u8array);
+    marc.convertFormat("z64");
+    return marc;
+}
+
 const myPatcherSettings = {
   language: 'en',
   requireValidation: true,
-  allowDropFiles: false,
+  allowDropFiles: true,
+  onloadrom: convertRom
 };
 
 let releases = [];
@@ -232,7 +241,8 @@ function updatePatcher() {
     name: patchFile,
     inputCrc32: 'eb97929e',
     description: selected.dataset.description || null,
-    outputName: `${selected.textContent} (Patched)`
+    outputName: `${selected.textContent}`,
+    outputExtension: 'z64'
   };
 
   if (RomPatcherWeb.isInitialized() === false) {
