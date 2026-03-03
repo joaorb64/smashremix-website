@@ -1,0 +1,46 @@
+name: Remix Released
+
+on:
+  repository_dispatch:
+    types: [remix_released]
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || true
+
+      - name: Run download script
+        run: |
+          echo "Action: ${{ github.event.client_payload.action }}"
+          echo "Tag: ${{ github.event.client_payload.tag }}"
+          python download_releases.py
+
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add .
+            git commit -m "Update from remix release ${{ github.event.client_payload.tag }}"
+            git push
+          else
+            echo "No changes to commit"
+          fi
