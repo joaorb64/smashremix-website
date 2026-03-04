@@ -11,5 +11,11 @@
     "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
     "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
   ],
-  "python.terminal.activateEnvironment": true
+  "python.terminal.activateEnvironment": true,
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": false
+    }
+  }
 }

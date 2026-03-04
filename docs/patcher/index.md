@@ -1,19 +1,29 @@
 ---
 title: Patcher
 ssb_crc: eb97929e
+hide: toc
 ---
 
+!!! info "Disclaimer"
+    This website does not condone piracy. This patcher requires that you use your own legally acquired Smash 64 ROM. The ROM patching is performed on your machine.
+
+#### Category
+
 <div class="patch-tabs">
-  <button class="md-button md-button--primary" onclick="switchCategory('releases', this)">Smash Remix Releases</button>
-  <button class="md-button md-button--primary" onclick="switchCategory('other', this)">Other / Misc</button>
+  <button class="md-button md-button-red" onclick="switchCategory('releases', this)">Smash Remix Releases</button>
+  <button class="md-button md-button-red" onclick="switchCategory('other', this)">Other / Misc</button>
 </div>
+
+#### Patch / Version
 
 <div class="patch-controls">
   <select id="patch-selector" onchange="updatePatcher()"></select>
-  <button class="md-button md-button--primary" id="openPatchModal" style="flex-shrink: 0;">
+  <button class="md-button md-button-red" id="openPatchModal" style="flex-shrink: 0;">
     Patch Notes
   </button>
 </div>
+
+##### Region
 
 <div id="region-container" style="margin-bottom: 1rem; margin-left: 1rem;">
   <label style="margin-right:15px;">
@@ -126,7 +136,7 @@ ssb_crc: eb97929e
 
 <div id="rom-patcher-powered" class="text-center">
   <a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"><img
-      src="rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher JS</a>
+      src="rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher JS by Marc Robledo</a>
 </div>
 
 <link type="text/css" rel="stylesheet" href="rom-patcher-js/style.css" media="all" />

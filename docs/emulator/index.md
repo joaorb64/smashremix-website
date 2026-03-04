@@ -1,61 +1,57 @@
-# Smash 64 Remix — Minimal Online Setup (RMG-K)
+# Netplay Setup
 
-![RMG-K Icon](https://raw.githubusercontent.com/Jay-Day/RMG-K/refs/heads/master/Artwork/RMG.svg)
+[:fontawesome-brands-youtube: Video Guide by Maafia](https://www.youtube.com/watch?v=l78N0rqMRac){ class="md-button md-button--primary" target="_blank" rel="noopener" data-md-color-primary="red" data-md-color-accent="red" }
 
-> Quick guide to get Smash 64 Remix online with **RMG-K**.
+## 1. Patching the ROM
 
----
+Smash Remix is a **ROM hack**, meaning you must apply the Remix data to the base game.
 
-## Requirements
+1.  Open the [web patcher](../patcher/index.md).
+2.  **Version:** Select the desired Smash Remix version. Default is latest release.
+3.  **ROM File:** Select your original Smash 64 ROM.
+4.  Click **Apply** and save the new `.z64` file.
 
-- Windows PC (Wine works on Linux/Mac)
-- Original _Super Smash Bros._ ROM (US recommended)
-- Smash Remix patch
-- **RMG-K** ([GitHub repo](https://github.com/Jay-Day/RMG-K))
-- USB controller or N64 controller adapter (optional)
+## 2. Emulator Installation
+1.  Download the latest version of [<img alt="RMG-K" class="twemoji" src="RMG.svg"> RMG-K](https://github.com/Jay-Day/RMG-K/releases).
+    - **Linux/Mac:** use the Windows version via `wine` to enable netplay.
+2.  Extract the package, run the program and click **Select ROM Directory**.
+3.  Point the emulator to the folder where you saved your patched ROM.
 
-_(Image: all required files here)_
+## 3. Controller Configuration
 
----
+If using a controller to play, these are the recommended settings:
 
-## Patch Your ROM
+| Controller | Plugin |
+|---|---|
+| Modern Controller | `Generic USB Input` (Default) |
+| GameCube Controller with adapter | `GameCube Adapter` |
+| N64 Controller with adapter | `Raphnetraw N64 Adapter` |
 
-- Open your legal Smash 64 ROM in the **Smash Remix patcher** ([smash64.online](https://smash64.online))
-- Apply the patch → save the patched `.z64`
+??? info "Using the Right Stick for Smash Attacks or Tilt Attacks"
+    If you want to use the right stick for smash or tilt attacks,
+    map the **N64 D-Pad** to your controller's **Right Stick**.
+    Then, when selecting characters in-game, set the desired
+    **Dpad Map** option.
 
-_(Image: Remix patcher UI here)_
+    ![Dpad Map Option](dpad1.png)
+    ![Dpad Map Option](dpad2.png)
 
----
+## 4. Online Play (Netplay)
 
-## Install and Launch RMG-K
+### How to Connect
 
-- Download RMG-K from [GitHub](https://github.com/Jay-Day/RMG-K)
-- Extract to a folder → run `RMG-K.exe`
+1.  Click the **Netplay** button.
+2.  Set your **Username** at the top of the netplay window.
+3.  Click on **Live Server List** for a complete list of available servers. The `ping` column indicates the connection latency between you and the server.
+4.  **To Host:** Once connected to a server, right-click the game in your list and select **Host**.
 
-_(Screenshot: RMG-K folder here)_
+### Tips
 
----
+- **Desyncs:** If a game desyncs, hit the **Drop** button and **Start** again to restart the game. There's no need to create a new room.
+- **Chat:** Messages appear as an overlay in the game window, even in Full Screen.
 
-## Set ROM Directory
+## 5. Other tips
 
-- `Options → Set ROM Directory` → select folder with your patched `.z64`
-
-_(Image: setting ROM directory here)_
-
----
-
-## Configure Controller
-
-- `Options → Configure Input Plugin`
-- Select your controller → map buttons → save configuration
-
-_(GIF: mapping controller here)_
-
----
-
-## Join Netplay
-
-- `File → Start Netplay → Connect to Kaillera Server`
-- Select a server → join a lobby → ready up → Start Game
-
-_(GIF: joining Kaillera lobby here)_
+- **Full Screen mode:** Use `Alt + Enter`
+- **Updates:** You can check for updates on the menu `Help > Check for Updates`
+- **Volume:** You can adjust the volume in `Settings > Audio`

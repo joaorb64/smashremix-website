@@ -28,6 +28,11 @@ plugins:
       repository: joaorb64/smashremix-website
       branch: main
   - macros
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
 
 markdown_extensions:
   - attr_list
@@ -35,6 +40,11 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - styles/modal.css
@@ -50,5 +60,5 @@ nav:
       - index.md
   - Patcher:
       - patcher/index.md
-  - Emulator Setup:
+  - Netplay Setup:
       - emulator/index.md

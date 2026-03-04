@@ -1,7 +1,8 @@
 ---
-title: Home
 hide:
   - toc
 ---
+
+# Home
 
 Hi

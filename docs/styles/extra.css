@@ -9,21 +9,21 @@
   flex-basis: 0;
 }
 
-.md-content .md-button {
+.md-button.md-button-red {
   color: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.15);
   background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Hover */
-.md-content .md-button:hover {
+.md-button.md-button-red:hover {
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.35);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Active tab */
-.md-content .md-button.active {
+.md-button.md-button-red.active {
   background-color: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color);
   border-color: var(--md-primary-fg-color);
@@ -32,7 +32,7 @@
 }
 
 /* Active hover (slightly darker primary) */
-.md-content .md-button.active:hover {
+.md-button.md-button-red.active:hover {
   filter: brightness(1.1);
 }
 
