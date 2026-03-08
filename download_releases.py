@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Download all Smash Remix xdelta patches from GitHub releases.
-Fetches release info and downloads .xdelta files to docs/remix/patches/
+Fetches release info and downloads .xdelta files to docs/patcher/patches/
 Also saves release notes to a JSON file for the patcher page.
 """
 
@@ -15,12 +15,13 @@ from pathlib import Path
 RELEASES_API = f"https://api.github.com/repos/JSsixtyfour/smashremix/releases"
 
 # Output directories
-PATCHES_DIR = Path(__file__).parent / "docs" / "remix" / "patches" / "releases"
+PATCHES_DIR = Path(__file__).parent / "docs" / \
+    "patcher" / "patches" / "releases"
 PATCHES_DIR.mkdir(parents=True, exist_ok=True)
 
 # Releases
 RELEASES_MANIFEST_FILE = Path(__file__).parent / "docs" / \
-    "remix" / "patches" / "releases.json"
+    "patcher" / "patches" / "releases.json"
 
 
 def fetch_releases():

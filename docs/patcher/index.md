@@ -199,7 +199,7 @@ function populateAllOptions() {
     opt.dataset.files = JSON.stringify(entry.files);
     opt.dataset.notes = entry.patch_notes || '';
     opt.dataset.version = entry.name || '';
-    opt.dataset.release_date = new Date(entry.release_date)
+    opt.dataset.release_date = new Date(entry.release_date).toLocaleDateString()
     opt.dataset.release_url = entry.original_url
     select.appendChild(opt);
   });
