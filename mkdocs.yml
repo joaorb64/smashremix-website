@@ -34,7 +34,12 @@ plugins:
       minify_js: true
       minify_css: true
       cache_safe: true
-  - social
+  - social:
+      cards_layout: remix
+      cards_layout_options:
+        background_color: "#121212FF"
+        background_image: "docs/assets/remixcast.webp"
+        background_image_tint: "#101010C0"
 
 markdown_extensions:
   - attr_list
