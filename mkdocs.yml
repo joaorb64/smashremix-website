@@ -66,12 +66,16 @@ extra:
   social:
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/@smashremix5540
+      name: YouTube
     - icon: fontawesome/brands/discord
       link: https://discord.gg/Kr6J6PH
+      name: Discord
     - icon: fontawesome/brands/bluesky
       link: https://bsky.app/profile/smashremix.bsky.social
+      name: Bluesky
     - icon: fontawesome/brands/github
       link: https://github.com/JSsixtyfour/smashremix
+      name: GitHub Repository
   social_image: assets/smashremixlogo_icon.webp
 
 nav:
