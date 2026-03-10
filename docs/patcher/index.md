@@ -4,8 +4,11 @@ ssb_crc: eb97929e
 hide: toc
 ---
 
-!!! info "Disclaimer"
-    This website does not condone piracy. This patcher requires that you use your own legally acquired Smash 64 ROM. The ROM patching is performed on your machine.
+{% include "disclaimer.md" %}
+
+!!! warning "Disclaimer"
+    This website does not condone piracy. This patcher requires that you use your own legally acquired Smash 64 ROM.<br>The ROM patching is performed on your machine.
+    { align=center }
 
 #### Category
 
@@ -18,7 +21,7 @@ hide: toc
 
 <div class="patch-controls">
   <select id="patch-selector" onchange="updatePatcher()"></select>
-  <button class="md-button md-button-red" id="openPatchModal" style="flex-shrink: 0;">
+  <button class="md-button md-button--primary" data-md-color-primary="red" id="openPatchModal" style="flex-shrink: 0;">
     Patch Notes
   </button>
 </div>

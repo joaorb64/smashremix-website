@@ -3,6 +3,8 @@ hide:
   - toc
 ---
 
+{% include "disclaimer.md" %}
+
 # Home
 
 <figure>
