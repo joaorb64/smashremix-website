@@ -2,6 +2,8 @@
 
 <!-- [:fontawesome-brands-youtube: Video Guide](https://www.youtube.com/watch?v=placeholder){ class="md-button md-button--primary" target="_blank" rel="noopener" data-md-color-primary="red" data-md-color-accent="red" } -->
 
+{% include "disclaimer.md" %}
+
 This page's contents will help you set up Smash Remix to play with others online on a computer.
 
 ## 1. Patching the ROM
