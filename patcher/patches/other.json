@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Big Boos Haunt Beta",
+        "file": "bigbooshauntbeta.xdelta",
+        "description": "The original version of Big Boo's Haunt, which was eventually entirely redone."
+    },
+    {
+        "name": "Bomberman Battle",
+        "file": "bomberman_battle.xdelta",
+        "description": "One of the attempts at a Bomberman stage."
+    },
+    {
+        "name": "Beta Conker",
+        "file": "conkerbeta.xdelta",
+        "description": "Version of Conker with different Up Special, Neutral Special, Jabs, and Up Smash."
+    },
+    {
+        "name": "Dark Samus Experimental",
+        "file": "darksamusexperiments.xdelta",
+        "description": "Experimental version of Dark Samus with different Neutral Special, Up Special, and attributes."
+    },
+    {
+        "name": "DK Jr.",
+        "file": "dk_jr.xdelta",
+        "description": "DK Jr. model imported over Donkey Kong."
+    },
+    {
+        "name": "DK Jr. Stage Music",
+        "file": "DK_JR_Stage.bin",
+        "description": "Music intended for the DK Jr. stage. This file can be imported directly into Super Smash Bros., but cannot be played with standard music software."
+    },
+    {
+        "name": "LTC Stage",
+        "file": "LTC.xdelta",
+        "description": "Altered version of Pokémon Stadium for the Low Tide City Smash Remix tournament, which was ultimately cancelled."
+    },
+    {
+        "name": "Mario Bros. Stage",
+        "file": "mariobros.xdelta",
+        "description": "Mario Bros. stage based on its appearance in modern games."
+    },
+    {
+        "name": "Meowth",
+        "file": "meowth.xdelta",
+        "description": "Meowth model imported over Fox."
+    },
+    {
+        "name": "Moonside",
+        "file": "moonside.xdelta",
+        "description": "Moonside stage."
+    },
+    {
+        "name": "Moray Towers",
+        "file": "moraytowers.xdelta",
+        "description": "Moray Towers stage."
+    },
+    {
+        "name": "Pichu",
+        "file": "pichu.xdelta",
+        "description": "Pichu model imported over Pikachu."
+    },
+    {
+        "name": "Raichu",
+        "file": "raichu.xdelta",
+        "description": "Raichu model imported over Pikachu."
+    },
+    {
+        "name": "Remix Race to the Finish Beta",
+        "file": "rttf2_beta.xdelta",
+        "description": "The original version of Remix Race to the Finish."
+    },
+    {
+        "name": "Spirit Temple",
+        "file": "spirit_temple.xdelta",
+        "description": "Spirit Temple stage intended for the original Ganondorf release."
+    },
+    {
+        "name": "Super Smash Bird",
+        "file": "supersmashbird.xdelta",
+        "description": "Mod created by Fray that predates Remix and served as inspiration for Falco in Smash Remix."
+    },
+    {
+        "name": "Tazmilly",
+        "file": "tazmilly.xdelta",
+        "description": "Tazmilly stage intended for Lucas, later replaced by Osohe."
+    },
+    {
+        "name": "Uncanny Mansion",
+        "file": "uncanny_mansion.xdelta",
+        "description": "Uncanny Mansion stage intended for Wario."
+    },
+    {
+        "name": "Waluigi",
+        "file": "waluigi.xdelta",
+        "description": "Waluigi model imported over Mario."
+    },
+    {
+        "name": "Wario Castle",
+        "file": "wario_castle.xdelta",
+        "description": "Wario Castle stage."
+    }
+]

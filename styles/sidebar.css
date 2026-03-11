@@ -1,0 +1,15 @@
+.md-sidebar.md-sidebar--primary {
+  top: 0;
+  padding-top: 0;
+}
+
+.md-nav__button.md-logo {
+  padding: 0;
+}
+
+.md-nav--primary .md-nav__title .md-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
