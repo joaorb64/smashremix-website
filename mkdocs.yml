@@ -81,9 +81,6 @@ extra:
   social_image: assets/smashremixlogo_icon.webp
 
 nav:
-  - Home:
-      - index.md
-  - Patcher:
-      - patcher/index.md
-  - Netplay Setup:
-      - netplay/index.md
+  - Home: index.md
+  - Patcher: patcher/index.md
+  - Netplay Setup: netplay/index.md
