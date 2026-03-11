@@ -21,7 +21,7 @@ hide: toc
 
 <div class="patch-controls">
   <select id="patch-selector" onchange="updatePatcher()"></select>
-  <button class="md-button md-button--primary" data-md-color-primary="red" id="openPatchModal" style="flex-shrink: 0;">
+  <button class="md-button md-button-red active" id="openPatchModal" style="flex-shrink: 0;">
     Patch Notes
   </button>
 </div>
