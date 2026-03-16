@@ -5,6 +5,8 @@ hide:
 
 # Home
 
+{% include "disclaimer.md" %}
+
 <figure>
   <img src="assets/remixcast.webp" alt="The Smash Remix cast." />
 </figure>

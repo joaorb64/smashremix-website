@@ -4,8 +4,11 @@ ssb_crc: eb97929e
 hide: toc
 ---
 
-!!! info "Disclaimer"
-    This website does not condone piracy. This patcher requires that you use your own legally acquired Smash 64 ROM. The ROM patching is performed on your machine.
+{% include "disclaimer.md" %}
+
+!!! warning "Disclaimer"
+    This website does not condone piracy. This patcher requires that you use your own legally acquired Smash 64 ROM.<br>The ROM patching is performed on your machine.
+    { align=center }
 
 #### Category
 
@@ -18,7 +21,7 @@ hide: toc
 
 <div class="patch-controls">
   <select id="patch-selector" onchange="updatePatcher()"></select>
-  <button class="md-button md-button-red" id="openPatchModal" style="flex-shrink: 0;">
+  <button class="md-button md-button-red active" id="openPatchModal" style="flex-shrink: 0;">
     Patch Notes
   </button>
 </div>
@@ -27,10 +30,10 @@ hide: toc
 <br/>
 <small id="releaseDate" className="text-sm" style="display: none;">Release date:</small>
 
-##### Region
 
-<div id="region-container" style="margin-bottom: 1rem; margin-left: 1rem;">
-  <label style="margin-right:15px;">
+<div id="region-container">
+  <h5 id="region" style="margin-top: 0; margin-bottom: 0;">Region:</h5>
+  <label style="margin-left: 0.5rem;">
     <input type="radio" name="region" value="ntsc" checked onchange="updatePatcher()">
     <span>NTSC</span>
   </label>
