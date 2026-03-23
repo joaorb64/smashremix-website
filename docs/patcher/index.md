@@ -159,11 +159,20 @@ async function convertRom(romFile) {
     return marc;
 }
 
+function onPatch(){
+  console.log(currentSelection)
+  window.dataLayer.push({
+    event: "patch",
+    version: currentSelection.version
+  });
+}
+
 const myPatcherSettings = {
   language: 'en',
   requireValidation: true,
   allowDropFiles: true,
-  onloadrom: convertRom
+  onloadrom: convertRom,
+  onpatch: onPatch
 };
 
 let releases = [];
@@ -230,6 +239,7 @@ function updatePatcher() {
   let patchFile = null;
 
   currentSelection = selected.dataset;
+  console.log(currentSelection)
 
   if (selected.dataset.category === 'releases') {
     const files = JSON.parse(selected.dataset.files);
@@ -308,7 +318,7 @@ function switchCategory(category, button) {
   const options = selector.querySelectorAll('option[data-category]');
   const tabButtons = document.querySelectorAll('.patch-tabs .md-button');
 
-  // Atualiza botão ativo
+  // Update active status for tabs
   tabButtons.forEach(btn => btn.classList.remove('active'));
   if (button) button.classList.add('active');
   else tabButtons[0].classList.add('active');
