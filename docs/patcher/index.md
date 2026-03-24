@@ -153,6 +153,11 @@ hide: toc
 <script type="text/javascript" src="MarcFileN64.js"></script>
 
 <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5J5JZWDFD6');
+
 async function convertRom(romFile) {
     const marc = new MarcFile(romFile._u8array);
     marc.convertFormat("z64");
@@ -161,8 +166,7 @@ async function convertRom(romFile) {
 
 function onPatch(){
   console.log(currentSelection)
-  window.dataLayer.push({
-    event: "patch",
+  gtag('event', 'patch', {
     version: currentSelection.version
   });
 }
