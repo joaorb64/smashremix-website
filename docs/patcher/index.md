@@ -228,6 +228,7 @@ function populateAllOptions() {
     opt.dataset.category = 'other';
     opt.dataset.file = entry.file;
     opt.dataset.description = entry.description || '';
+    opt.dataset.version = entry.name;
     select.appendChild(opt);
   });
 }
