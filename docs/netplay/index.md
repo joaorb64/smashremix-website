@@ -17,7 +17,7 @@ Smash Remix is a **ROM hack**, meaning you must apply the Remix patch to the ori
 
 ## 2. Emulator Installation
 1.  Download the latest version of [<img alt="RMG-K" class="twemoji" src="RMG.svg"> RMG-K](https://github.com/Jay-Day/RMG-K/releases/latest). Using the portable version is recommended.
-> **Linux/Mac users:** use the Windows version via `wine`, as native netplay support currently isn't available for these platforms.
+> **Mac users:** use the Windows version via `wine`, as there currently isn't a native version of RMG-K for this platform.
 2.  Extract the package, run the program and click **Select ROM Directory**.
 3.  Point the emulator to the folder where you saved your patched ROM.
 
